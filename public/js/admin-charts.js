@@ -28,13 +28,16 @@ $(document).ready(function() {
     'fleischig': 'darkred',
     'vegan': 'olive',
     'vegetarisch': 'yellowgreen',
+
+    'alcoholic': 'red',
+    'non-alcoholic': 'grey',
   };
 
   function getColors (stats) {
     return stats.map(s => COLORS[s.field]);
   }
 
-  ['gender', 'study', 'food'].forEach(function(aspect) {
+  ['gender', 'study', 'food', 'drinks'].forEach(function(aspect) {
     $.get(`${BASE_URL}/api/statistics/${aspect}${yearParam}`, function(stats, status) {
       if (status !== 'success') return console.error(stats, 'error');
 

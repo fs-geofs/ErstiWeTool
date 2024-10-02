@@ -26,6 +26,8 @@ html
     form#form-register.hidden(action='api/register' method='POST')
       label(for='token') Anmeldungs-Code:
       input#token(name='token', type='text', required='', autocomplete='off', maxlength="8")
+      label(for='matrikel') Matrikelnummer:
+      input#token(name='matrikel', type='number', required='', autocomplete='off', maxlength="6")
       p
         | Bitte gebe deine persönlichen Daten an.
         | Dies macht die Organisation des Wochenendes für dich & uns deutlich einfacher.
@@ -77,6 +79,14 @@ html
         label
           input(type='radio', name='food', value='vegan', required='')
           | vegan
+      fieldset#drinks
+        legend Ich trinke gerne:
+        label
+          input(type='radio', name='drinks', value='non-alcoholic', required='')
+          | nicht-alkoholische Getränke
+        label
+          input(type='radio', name='drinks', value='alcoholic', required='')
+          | alkoholische Getränke
       label(for='comment') Willst du uns noch etwas mitteilen?
       textarea#comment(name='comment', autocomplete='off', placeholder='Allergene, ... [max 500 Zeichen]', maxlength="500")
       label

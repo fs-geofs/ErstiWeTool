@@ -71,12 +71,15 @@ html
       canvas#chart-gender(width="300", height="200")
       canvas#chart-study(width="400", height="200")
       canvas#chart-food(width="400", height="200")
+      canvas#chart-drinks(width="400", height="200")
+
 
     h1 Userliste
     table#user-table.compact.striped.order-column.hover(data-page-length='100', data-order='[[12]]', data-scroll-x='true', width='100%')
       thead
         tr
           th Token
+          th Matrikel
           th Vorname
           th Nachname
           th Geschlecht
@@ -85,6 +88,7 @@ html
           th Kommentar
           th Geburtstag
           th Ernährung
+          th Trinkung
           th Studiengang
           th(data-visible="false") Jahr
           th state

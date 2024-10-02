@@ -12,3 +12,6 @@ services:
     build: .
     ports:
       - "3000:3000"
+    volumes:
+      - './admin.htpasswd:/usr/src/app/admin.htpasswd'
+      - './config.js:/usr/src/app/config.js'

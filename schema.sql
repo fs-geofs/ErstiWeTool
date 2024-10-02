@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS `ersti-we`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `ersti-we`.`users` (
   `token` CHAR(8) NOT NULL,      -- registration token
+  `matrikel` CHAR(6) NULL,
   `firstname` VARCHAR(50) NULL,
   `lastname` VARCHAR(50) NULL,
   `gender` ENUM('male', 'female', 'other') NULL,
@@ -25,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `ersti-we`.`users` (
   `comment` VARCHAR(500) NULL,
   `birthday` VARCHAR(50) NULL,
   `food` ENUM('fleischig', 'vegan', 'vegetarisch') NULL,
+  `drinks` ENUM('alcoholic', 'non-alcoholic') NULL,
   `study` ENUM('Geoinformatik', 'Geographie', 'Landschaftsökologie', 'Zwei-Fach-Bachelor') NULL,
   `year` INT NOT NULL, -- assigned year of the user
   `state` ENUM('free', 'registered', 'opted_out') NOT NULL DEFAULT 'free', -- flag, whether a token is used or not

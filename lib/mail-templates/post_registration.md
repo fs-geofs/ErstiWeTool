@@ -56,6 +56,7 @@ Folgend noch einmal die von dir angegebenen Daten:
 |     **Geburtstag:** | {{birthday}}               |
 |    **Studiengang:** | {{study}}                  |
 | **Ernährungsstil:** | {{food}}                   |
+| **Getränkestil:**   | {{drinks}}                 |
 |      **Kommentar:** | {{comment}}                |
 
 Wenn du noch Fragen hast, schreib uns gerne eine E-Mail an [fsgi@uni-muenster.de](mailto:fsgi@uni-muenster.de?subject=Erstiwochenende {{year}}).
