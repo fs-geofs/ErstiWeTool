@@ -8,6 +8,8 @@ services:
       - MYSQL_ROOT_PASSWORD=supersecretstuff
     volumes:
       - './schema.sql:/schema.sql'
+      - mysql-data:/var/lib/mysql
+
   erstiwetool:
     build: .
     ports:
@@ -15,3 +17,6 @@ services:
     volumes:
       - './admin.htpasswd:/usr/src/app/admin.htpasswd'
       - './config.js:/usr/src/app/config.js'
+
+volumes:
+  mysql-data:
