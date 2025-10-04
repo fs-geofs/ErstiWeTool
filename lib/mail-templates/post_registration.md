@@ -34,6 +34,7 @@ Wir werden das Alter der Teilnehmer vor der Abfahrt zu kontrollieren, halte dein
     (Sonstige Einkaufsmöglichkeiten quasi nicht vorhanden)
   - Schreibzeug
   - Gute Laune!
+  - Fahrradhelm (nur Geoinformatik-Studierende)
 
 #### Abmeldung
 Deine Anmeldung ist verbindlich.
