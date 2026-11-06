@@ -3,7 +3,7 @@ var db = require('../DBhandler.js');
 var cfg = require('../config.js');
 
 var userData = {
-  email: Math.random().toString(36).substr(2,6) + '@asdf.de',
+  email: Math.random().toString(36).slice(2, 8) + '@asdf.de',
   firstname: 'Heinz',
   lastname: 'Kjuni',
   gender: 'male',

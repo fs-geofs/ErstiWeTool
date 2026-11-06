@@ -2,7 +2,7 @@
 Tool to manage a freshmans weekend by GEOFS.
 
 ## Installation
-Requires [`node ^8.x`](https://nodejs.org/en/download/package-manager/), [`yarn`](https://yarnpkg.com/en/docs/install) and `mysql-server ^5.7`.
+Requires [Node.js 26 LTS](https://nodejs.org/en/download/package-manager/), [`yarn`](https://yarnpkg.com/en/docs/install) 1.22 and `mysql-server ^5.7`. The container image is `node:26-alpine`.
 
 ```bash
 git clone https://github.com/SpeckiJ/ErstiWeTool.git
@@ -30,9 +30,9 @@ There are two frontend endpoints:
 ## Database via docker
 ```sh
 # the root pw is set in docker-compose.yml
-docker-compose up -d mysql
-docker-compose exec mysql bash -c 'mysql --default-character-set=utf8 -p < schema.sql'
-docker-compose exec mysql bash -c "echo 'SET PASSWORD FOR \"ersti-we\" = PASSWORD(\"test\")' | mysql -p"
+docker compose up -d mysql
+docker compose exec mysql bash -c 'mysql --default-character-set=utf8 -p < schema.sql'
+docker compose exec mysql bash -c "echo 'SET PASSWORD FOR \"ersti-we\" = PASSWORD(\"test\")' | mysql -p"
 ```
 
 ## run as service

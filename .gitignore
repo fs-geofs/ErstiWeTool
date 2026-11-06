@@ -1,5 +1,27 @@
-node_modules
-*.log
-*.htpasswd
-.vscode
+# installed packages
+node_modules/
+
+# local configuration and secrets
 config.js
+*.htpasswd
+.env
+.env.*
+
+# runtime files
+pid/
+*.pid
+*.log
+
+# editor and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+
+# local compose overrides and test output
+docker-compose.override.yml
+coverage/
+.nyc_output/

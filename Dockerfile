@@ -1,22 +1,16 @@
-FROM node:12-alpine
+FROM node:26-alpine
 
-#RUN apk --no-cache --virtual .build add build-base python git
+RUN apk update && apk upgrade --no-cache \
+    && apk add --no-cache tzdata \
+    && npm install --global --allow-scripts=yarn yarn@1.22.22
 
-RUN apk update && apk upgrade --no-cache
-
-# taken from node:6-onbuild
-#RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# copy in main package.json and yarn.lock
-COPY package.json /usr/src/app/
-COPY yarn.lock /usr/src/app/
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile --production
 
-RUN yarn install --pure-lockfile --production
-RUN yarn add full-icu
+COPY . .
 
-COPY . /usr/src/app
-
-ENV NODE_ICU_DATA=node_modules/full-icu
-ENV NODE_ENV production
-CMD [ "yarn", "start" ]
+ENV TZ=Europe/Berlin
+ENV NODE_ENV=production
+CMD ["yarn", "start"]

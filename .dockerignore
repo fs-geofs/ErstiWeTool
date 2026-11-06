@@ -1,0 +1,12 @@
+# The image only needs the app. Dependencies are installed during the build,
+# and config.js plus admin.htpasswd are mounted at runtime.
+*
+
+!package.json
+!yarn.lock
+!bin/
+!bin/**
+!lib/
+!lib/**
+!public/
+!public/**
